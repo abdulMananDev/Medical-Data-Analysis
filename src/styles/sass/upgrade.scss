@@ -1,0 +1,128 @@
+.upgrade {
+  position: relative;
+
+  text-align: center;
+  &_navigation {
+    background-image: linear-gradient(
+      to right,
+      rgba(243, 242, 242, 0.774),
+      rgba(207, 204, 204, 0.93)
+    );
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+
+    @include media(">=tablet", "<desktop") {
+      padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
+    }
+    @include media(">=phone", "<tablet") {
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &_toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  &_toggle-containers {
+    position: relative;
+  }
+  &_add-container {
+    background-image: linear-gradient(
+      to right,
+      rgba(243, 242, 242, 0.774),
+      rgba(207, 204, 204, 0.93)
+    );
+    padding: 1.5rem 0 0 0;
+
+    @include media(">=phone", "<tablet") {
+      padding: 1rem 0 0 0;
+    }
+  }
+  &_form {
+    padding: 2rem 0;
+    @include media(">=tablet", "<desktop") {
+      padding: 1.5rem 0;
+    }
+    @include media(">=phone", "<tablet") {
+      padding: 1rem 0;
+    }
+  }
+  &_category {
+    margin-bottom: 1.5rem;
+
+    @include media(">=phone", "<tablet") {
+      margin-bottom: 1rem 0;
+    }
+  }
+
+  &_retrieve-container {
+    border-radius: 1rem;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(
+      to right,
+      rgba(243, 242, 242, 0.774),
+      rgba(207, 204, 204, 0.93)
+    );
+    padding: 1.5rem 0 0 0;
+    display: none;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 0.7rem;
+    }
+    @include media(">=phone", "<tablet") {
+      border-radius: 0.5rem;
+    }
+  }
+  &_retrieve-inner-container {
+    display: inline-block;
+    width: 80%;
+    border: 2px solid $color-primary;
+    padding: 1rem;
+    color: $color-primary;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: whitesmoke;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    @include media(">=phone", "<tablet") {
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.btn-add-tests {
+  margin-right: 1.5rem;
+  @include media(">=phone", "<tablet") {
+    margin-right: 1rem;
+  }
+}
+.btn-retrieve-tests {
+  margin-left: 5rem;
+  @include media(">=phone", "<tablet") {
+    margin-right: 3rem;
+  }
+}
+#min,
+#max,
+#units {
+  width: 10rem;
+  @include media(">=phone", "<tablet") {
+    width: 7rem;
+  }
+}
+.min-max-units {
+  display: inline-block;
+  width: 60%;
+  @include media(">=phone", "<tablet") {
+    width: 70%;
+  }
+}

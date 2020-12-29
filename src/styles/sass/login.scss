@@ -1,0 +1,278 @@
+@keyframes rotatingOne {
+  0% {
+    transform: scale(0) rotate(-60deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(60deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes rotatingTwo {
+  0% {
+    transform: scale(0) rotate(60deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-60deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes topOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.login-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 96vh;
+  background-image: linear-gradient(
+    rgba(243, 242, 242, 0.774),
+    rgba(207, 204, 204, 0.93)
+  );
+}
+
+@keyframes bottomUp {
+  0% {
+    transform: translateY(80%) scale(0);
+  }
+  50% {
+    transform: translateY(-20%) scale(0.5);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.column-left {
+  position: relative;
+  width: 45%;
+  height: 80vh;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  top: 10%;
+  left: 3%;
+  @include media(">=tablet", "<desktop") {
+    height: 30vh;
+    top: 10%;
+  }
+  @include media(">=phone", "<tablet") {
+    width: 0%;
+  }
+}
+.login-message {
+  margin: 3rem 0 1rem 0;
+  @include media(">=phone", "<tablet") {
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+  }
+}
+
+.color {
+  height: 15rem;
+  width: 20rem;
+
+  border-radius: 0.8rem;
+  animation-name: rotating;
+  @include media(">=tablet", "<desktop") {
+    height: 12rem;
+    width: 12rem;
+  }
+  @include media(">=phone", "<tablet") {
+    height: 0em;
+    width: 0rem;
+  }
+}
+.color-1 {
+  background-color: $color-primary;
+  animation-name: rotatingOne;
+  animation-duration: 2.4s;
+}
+.color-2 {
+  background-color: $color-yellow;
+  animation-name: rotatingTwo;
+  animation-duration: 2.4s;
+  position: absolute;
+  bottom: 0;
+}
+.color-3 {
+  background-color: #ff5f40;
+  animation-name: rotatingOne;
+  animation-duration: 2.4s;
+  position: absolute;
+  top: 0%;
+  right: 0;
+}
+.color-4 {
+  animation-name: rotatingTwo;
+  animation-duration: 2.4s;
+  background-color: $color-green-dark;
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+}
+.color:not(:last-child) {
+  // margin-bottom: 1rem;
+}
+.welcome {
+  animation: topOpacity 2.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $color-primary;
+  @include media(">=phone", "<tablet") {
+    display: none;
+  }
+}
+.column-right {
+  position: relative;
+  width: 55%;
+  text-align: center;
+  @include media(">=phone", "<tablet") {
+    width: 100%;
+  }
+}
+.login-card {
+  animation: bottomUp 2.4s;
+  position: absolute;
+  border: 2px solid $color-primary;
+  top: 22%;
+  left: 25%;
+  display: none;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  width: 50%;
+  background-color: #cecfd4;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+  @include media(">=tablet", "<desktop") {
+    top: 10%;
+  }
+  @include media(">=phone", "<tablet") {
+    left: 8%;
+    width: 85%;
+    top: 20%;
+  }
+}
+
+.lab-login-form {
+  margin-top: 1.7rem;
+  width: 100%;
+}
+.con {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.lab-login {
+  border: none;
+  width: 60%;
+  height: 3rem;
+  outline: none;
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  padding-left: 1rem;
+  color: $color-primary;
+  border-radius: 5px;
+  background-color: aliceblue;
+  // text-transform: capitalize;
+
+  // border: 1px solid $color-primary;
+
+  &:focus {
+    box-shadow: 8px 9px 16px rgba(173, 183, 199, 0.6),
+      -8px -9px 16px rgba(255, 255, 255, 0.5);
+  }
+  &:placeholder-shown + .form_label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-primary;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    opacity: 0.5;
+  }
+}
+.sign-up-card {
+  border: 2px solid $color-primary;
+  animation: bottomUp 2.5s;
+  transition: all 0.3s;
+  position: absolute;
+  // top: 50%;
+
+  left: 22%;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  // transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #eee;
+  border-radius: 1.5rem;
+  color: $color-primary;
+  // backface-visibility: hidden;
+  @include media(">=phone", "<tablet") {
+    width: 85vw;
+    // left: 50%;
+    left: 5%;
+  }
+}
+.lab-password {
+  position: relative;
+  // text-align: center;
+  // display: inline-block;
+
+  // display: flex;
+  // flex-direction: row;
+
+  // justify-content: center;
+}
+
+.show {
+  position: absolute;
+  right: 25%;
+  font-size: 1.5rem;
+  stroke: white;
+  color: $color-primary;
+  top: 20%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#to-sign-up:link,
+#to-sign-up:visited {
+  color: $color-primary;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+#to-login:link,
+#to-login:visited {
+  color: $color-primary;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+#to-login:hover,
+#to-sign-up:hover {
+  // color: $color-green-dark;
+  transform: translateY(-2px);
+}
+.heading-p {
+  font-size: 3rem;
+  color: $color-primary;
+}

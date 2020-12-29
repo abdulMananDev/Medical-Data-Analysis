@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Lab | Dashboard</title>
+  </head>
+  <script>
+    const QUERY = window.location.search;
+    const URL = new URLSearchParams(QUERY);
+    let data = URL.get("lab_data");
+    data = JSON.parse(data);
+    console.log(data);
+  </script>
+  <body>
+    <!-- index container start -->
+    <div class="index_container">
+      <!-- container details  -->
+
+      <div class="container_details">
+        <div class="greeting margin-small">Welcome</div>
+        <div class="margin-small">
+          <span class="font-weight" id="owner"></span>
+        </div>
+        <div class="lab-name margin-small" id="lab-name"></div>
+        <div class="margin-small" id="lab-location"></div>
+        <div class="lab-contact" id="lab-contact"></div>
+        <div class="copyright">
+          <span>&copy; Sehat <span id="current-year"></span></span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container_image-wrapper">
+          <div class="container_cards">
+            <div class="top-two">
+              <div class="new-patient general">
+                <span class="material-icons margin-small-top icon-style">
+                  person_add
+                </span>
+                <h2 class="heading-secondary">Patient Details</h2>
+                <p class="para-secondary">
+                  Patient Details lets You find out the details of the patient
+                  exisiting in Your Database. And also allows You to Add new
+                  patient to your Database.
+                </p>
+                <div class="container-btn">
+                  <button class="btn-primary" id="add">Add</button>
+                </div>
+              </div>
+              <div class="test-module general">
+                <span class="material-icons margin-small-top icon-style">
+                  assignment
+                </span>
+                <h2 class="heading-secondary">Reports</h2>
+                <p class="para-secondary">
+                  Reports Functionality allows You to find a Patient using a
+                  6-digit Unique-ID from where reports can be generated on the
+                  basis of test results.
+                </p>
+                <div class="container-btn">
+                  <button class="btn-primary" id="view">View</button>
+                </div>
+              </div>
+              <div class="upgrade general">
+                <span class="material-icons margin-small-top icon-style">
+                  biotech
+                </span>
+                <h2 class="heading-secondary">Tests</h2>
+                <p class="para-secondary">
+                  This Section allows You to Upgrade the testing equipment and
+                  check all sorts of Tests that are being done at you
+                  Laboratory.
+                </p>
+                <div class="container-btn">
+                  <button class="btn-primary" id="upgrade">Upgrade</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="bottom-two"> -->
+        <!--  -->
+
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- "" -->
+      </div>
+      <div class="notification-panel">
+        <div class="cover-wrap">
+          <h1 class="heading-secondary">Notifications</h1>
+          <span class="material-icons icon-style" id="notifications">
+            notifications
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="../src/js/index.js "></script>
+  </body>
+</html>

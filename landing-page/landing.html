@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="main.8dd99bdf.chunk.css" rel="stylesheet" />
+    
+    <title>Sehat | Landing Page</title>
+  </head>
+  <body>
+    <div class="overlay-div logo">
+      <div class="cross">
+        <span class="material-icons icon-style"> highlight_off </span>
+      </div>
+      <h1>Sehat</h1>
+      <span style="font-weight: bold"
+        >An Open Source Medical Data Collection PLatform</span
+      >
+      <!-- Mufti Edit -->
+      <p>
+        This project is about creating an open source alternative to the
+        currently existing proprietary Medical Data Management System with the
+        main focus on improvising information accessibility to users thereby
+        improving the overall experience. Besides this, this project aims at
+        building a patient’s profile and helps in keeping track of previous
+        medical history of the respective patient as time progresses.
+        <br /><br />
+        <b>To create-</b> <br>
+        an open source alternative to the currently existing
+        proprietary Medical Data Management System with main focus on
+        improvising information accessibility to users thereby improving overall
+        experience.
+      </p>
+    </div>
+    <div class="App">
+      <div class="header">
+        <div class="container">
+          <div class="row v-center space-between">
+            <div class="logo"><a href="/">Sehat.</a></div>
+            <div class="flex-col">
+              <div class="nav">
+                <span class="Login-text">Login</span>
+                <span class="material-icons">account_circle</span>
+              </div>
+              <span class="border"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="main">
+        <div class="container">
+          <div class="row">
+            <h2>
+              <div class="line">
+                <span>Open Source Data Collection Software;</span>
+              </div>
+              <div class="line">
+                <span style="transform: translate(0px, 0px)">what we do.</span>
+              </div>
+            </h2>
+            <div class="btn-row">
+              More About Us
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-arrow-right"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cases">
+        <div class="container-fluid">
+          <div class="cases-navigation">
+            <div class="cases-arrow prev disabled" style="display: none">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-arrow-left"
+              >
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </div>
+            <div class="cases-arrow next" style="display: none">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-arrow-right"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="case">
+              <div class="case-details">
+                <span>Users</span>
+                <h2>People with a self care motivation</h2>
+              </div>
+              <div class="case-img">
+                <img
+                  src="media/user-min.67a1dea9.png"
+                  alt=" People with a self care motivation"
+                  style="transform: translate(0px, 0px)"
+                />
+              </div>
+            </div>
+            <div class="case">
+              <div class="case-details">
+                <span>Flexibility</span>
+                <h2>Easier Lab Consultations-Anytime Anywhere</h2>
+              </div>
+              <div class="case-img">
+                <img
+                  src="media/lab-min.326c33bc.png"
+                  alt="Amazing Minds in need of a platform to build up"
+                  style="transform: translate(0px, 0px)"
+                />
+              </div>
+            </div>
+            <div class="case">
+              <div class="case-details">
+                <span>Medical Testing Hubs</span>
+                <h2>Can avail our platform to make Society better</h2>
+              </div>
+              <div class="case-img">
+                <img
+                  src="media/national-cancer-institute-KMvoHcB-w5g-unsplash.jpg"
+                  alt=" Can avail our platform to make Society better"
+                  style="transform: translate(0px, 0px)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="2.9f16f308.chunk.js"></script> -->
+    <!-- <script src="main.36f09c70.chunk.js"></script> -->
+    <script>
+      const App = document.querySelector(".App");
+      const overlay = document.querySelector(".overlay-div");
+      const feather = document.querySelector(".feather");
+      const cross = document.querySelector(".cross");
+      const login = document.querySelector(".nav");
+      console.log(App, overlay, feather, cross, login);
+
+      feather.addEventListener("click", () => {
+        App.style.opacity = 0.4;
+        overlay.style.opacity = 1;
+        overlay.style.visibility = "visible";
+      });
+      cross.addEventListener("click", () => {
+        App.style.opacity = 1;
+        overlay.style.opacity = 0;
+        overlay.style.visibility = "hidden";
+      });
+      login.addEventListener("click", () => {
+        window.location = "../public/login.html";
+      });
+    </script>
+  </body>
+</html>

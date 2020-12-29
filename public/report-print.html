@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Report | Print</title>
+  </head>
+  <script>
+    const QUERY = window.location.search;
+    const URL = new URLSearchParams(QUERY);
+    let data = URL.get("paramData");
+    data = JSON.parse(data);
+    console.log(data);
+  </script>
+  <body>
+    
+    <div class="receipt-container">
+      <div class="receipt-img">
+        <img src="../src/assets/medical-logo.jpg" class="receipt_img" alt="" />
+      </div>
+      <div class="receipt">
+        <div class="receipt_lab-details receipt_user-details">
+          <div class="col-flex">
+            <div class="receipt-name-top">Date:</div>
+            <div class="receipt-name-top">Lab-Name:</div>
+            <div class="receipt-name-top">Lab-Address:</div>
+            <div class="receipt-name-top">Lab-Phone:</div>
+          </div>
+
+          <div class="col-flex">
+            <div class="receipt-date underline" id="date"></div>
+            <div class="receipt-name underline">Lal-Path</div>
+            <div class="underline">Soura Branch-(A)</div>
+            <div class="underline">0194-22358962</div>
+          </div>
+        </div>
+        <div class="receipt_user-details">
+          <div class="col-flex">
+            <div class="receipt-name-top">Unique-id:</div>
+            <div class="receipt-name-top">Name:</div>
+            <div class="receipt-name-top">Age:</div>
+            <div class="receipt-name-top">Address:</div>
+            <div class="receipt-name-top">Phone:</div>
+          </div>
+          <div class="col-flex">
+            <div class="receipt-unique-id underline"></div>
+            <div class="receipt-Name underline"></div>
+            <div class="receipt-age underline"></div>
+            <div class="receipt-address underline"></div>
+            <div class="receipt-number underline"></div>
+          </div>
+        </div>
+      </div>
+      <div class="heading-tertiary">Medical Report</div>
+      <div class="receipt-body">
+        <div class="table-wrapper-receipt">
+          <table class="fl-table-receipt">
+            <thead>
+              <tr>
+                <th>S. No</th>
+                <th>Test</th>
+                <th>Value</th>
+                <th>Band</th>
+                <th>min-value</th>
+                <th>max-value</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- <tr>
+                <td>1</th>
+                <td>Sr Sodium</th> 
+                <td>2800</th>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
+    <div class="print_print">
+      <span class="material-icons"> print </span>
+    </div>
+    <script src="../src/js/print.js"></script>
+  </body>
+</html>

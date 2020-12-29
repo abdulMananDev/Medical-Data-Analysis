@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Report | Generation</title>
+  </head>
+  <body>
+    <div class="report_container margin-small">
+      <div class="heading-secondary">
+        <h2>Lab-Report</h2>
+      </div>
+      <div class="report_container--search">
+        <input
+          type="text"
+          class="form_input"
+          id="unique_id"
+          placeholder="Unique Id"
+          spellcheck="false"
+        />
+        <label for="unique_id" class="form_label">Patient Id</label>
+        <button class="positioning btn-primary" id="report_search">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+      <!-- 1046902102 -->
+      <div class="user-report">
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">
+            account_circle
+          </div>
+          <div class="details" id="patient-name-report"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">
+            settings_cell
+          </div>
+          <div class="details" id="patient-phone-report"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">email</div>
+          <div class="details" id="patient-email-report"></div>
+        </div>
+        <!-- <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">wc</div>
+          <div class="details" id="patient-gender-report"></div>
+        </div> -->
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">location_on</div>
+          <div class="details" id="patient-address-report"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">cake</div>
+          <div class="details" id="patient-age-report"></div>
+        </div>
+      </div>
+
+      <!-- <div class="test-Description"></div> -->
+    </div>
+    <div class="button-report-submit">
+      <button class="btn-primary" id="report-submit-btn">Submit</button>
+    </div>
+
+    <div class="button-report-print">
+      <span class="material-icons b-r-p"> print </span>
+    </div>
+
+    <script src="../src/js/report.js"></script>
+  </body>
+</html>

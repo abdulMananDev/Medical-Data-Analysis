@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+@import "variables";
+@import "breakpoint";
+@import "patients.scss";
+@import "list.scss";
+@import "button.scss";
+@import "utility.scss";
+@import "report";
+@import "login";
+@import "upgrade";
+
+@media print {
+  html,
+  body {
+    color: black !important;
+    font-weight: bolder;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 1rem;
+  user-select: none;
+  overscroll-behavior: none;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.8rem;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0rem;
+  }
+}
+
+.index_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  // justify-content: space-between;
+  // background-color: green;
+  height: 96vh;
+  width: 100%;
+}
+.container {
+  position: relative;
+  // height: 95vh;
+  width: 65%;
+  background-image: linear-gradient(
+      rgba(90, 153, 196, 0.527),
+      rgba(45, 76, 97, 0.247)
+    ),
+    url("../assets/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media(">=tablet", "<desktop") {
+    width: 55%;
+  }
+
+  &_image-wrapper {
+    position: absolute;
+    height: 96vh;
+    width: 100%;
+    // background-image: linear-gradient(
+    //     rgba(90, 153, 196, 0.527),
+    //     rgba(45, 76, 97, 0.247)
+    //   ),
+    //   url("../assets/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // overflow: hidden;
+    border-radius: 3px;
+  }
+  &_cards {
+    position: relative;
+
+    padding: 2rem 0;
+    width: 100%;
+    top: 0%;
+    border-radius: 4px;
+
+    // overflow: hidden;
+    // @include media(">=tablet", "<desktop") {
+    //   padding: 2rem 0;
+    //   width: 85%;
+    //   top: 10%;
+    //   left: -4%;
+    //   border-radius: 4px;
+    // }
+  }
+
+  // &_cards .new-patient {
+  // }
+  // &_cards .test-module {
+  // }
+  // &_cards .update {
+  // }
+  // &_cards .history {
+  // }
+
+  &_details {
+    display: inline-block;
+    height: 96vh;
+    width: 15%;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: $color-primary;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+
+    // justify-content: space-between;
+    @include media(">=tablet", "<desktop") {
+      padding: 1.6rem;
+      font-size: 1.2rem;
+      width: 20%;
+    }
+    @include media(">=phone", "<tablet") {
+      padding: 1.8rem;
+      font-size: 1rem;
+    }
+  }
+
+  &-btn {
+    position: relative;
+    margin: 2rem 0rem;
+    @include media(">=tablet", "<desktop") {
+      margin: 1.7rem 0rem;
+    }
+  }
+  .details {
+    &_image-container {
+      padding: 2rem;
+      @include media(">=tablet", "<desktop") {
+        padding: 1.7rem;
+      }
+    }
+    // &_img {
+    //   height: 15rem;
+    //   width: 15rem;
+    //   border-radius: 100rem;
+    //   @include media(">=tablet", "<desktop") {
+    //     height: 12rem;
+    //     width: 12rem;
+    //   }
+    // }
+  }
+}
+.font-weight {
+  font-weight: 700;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  color: $color-primary;
+  // margin-top: 2rem;
+  display: inline-block;
+  @include media(">=tablet", "<desktop") {
+    font-size: 1.5rem;
+    // margin-top: 1.5rem;
+  }
+  @include media(">=phone", "<tablet") {
+    font-size: 1rem;
+  }
+}
+.para-secondary {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  color: $color-primary;
+  margin-top: 1rem;
+  @include media(">=tablet", "<desktop") {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
+  @include media(">=phone", "<tablet") {
+    font-size: 0.6rem;
+  }
+}
+
+.top-two {
+  position: relative;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(20rem, 6fr));
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 0;
+  overflow-y: auto;
+  height: 90vh;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    transition: all 0.3;
+    @include media(">=tablet", "<desktop") {
+      width: 10px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $white;
+    border-radius: 10px;
+    transition: all 0.8s;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 8px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 6px;
+    transition: all 0.8s;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 8px;
+    }
+  }
+  @include media(">=tablet", "<desktop") {
+    // margin: 2rem 0;
+  }
+}
+
+.bottom-two {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  @include media(">=tablet", "<desktop") {
+    margin-bottom: 2rem;
+  }
+  @include media(">=phone", "<tablet") {
+    margin-bottom: 1rem;
+  }
+}
+.general {
+  // border: 1px solid $color-primary;
+  margin: 1.5rem;
+  width: 50%;
+  text-align: center;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  box-shadow: inset 8px 9px 16px rgba(165, 192, 236, 0.6),
+    inset -8px -9px 16px rgba(138, 177, 228, 0.2);
+
+  @include media(">=tablet", "<desktop") {
+    // width: 30%;
+    border-radius: 1rem;
+  }
+  @include media(">=phone", "<tablet") {
+    border-radius: 0.5rem;
+  }
+}
+
+.greeting {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  // margin-bottom: 3rem;
+  @include media(">=tablet", "<desktop") {
+    margin-bottom: 1.5rem;
+  }
+  @include media(">=phone", "<tablet") {
+    margin-bottom: 1rem;
+  }
+}
+
+.icon-style {
+  color: $color-primary;
+  font-size: 3rem;
+  // cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    font-size: 2.3rem;
+  }
+  @include media(">=phone", "<tablet") {
+    font-size: 1.8rem;
+  }
+}
+.noti-icon-style {
+  color: $color-primary;
+  font-size: 1.7rem;
+  cursor: pointer;
+  // display: inline;
+  @include media(">=tablet", "<desktop") {
+    font-size: 1.2rem;
+  }
+  @include media(">=phone", "<tablet") {
+    font-size: 1rem;
+  }
+}
+.flex-end {
+  position: absolute;
+  right: 1%;
+  cursor: pointer;
+}
+.copyright {
+  position: absolute;
+  bottom: 1%;
+}
+.notification-panel {
+  width: 20%;
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.774),
+    rgba(233, 233, 233, 0.493)
+  );
+  border-radius: 5px;
+  &::-webkit-scrollbar {
+    width: 10px;
+    transition: all 0.3;
+    @include media(">=tablet", "<desktop") {
+      width: 10px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $white;
+    border-radius: 10px;
+    transition: all 0.8s;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 8px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 6px;
+    transition: all 0.8s;
+    @include media(">=tablet", "<desktop") {
+      border-radius: 8px;
+    }
+  }
+  @include media(">=tablet", "<desktop") {
+    width: 25%;
+  }
+  @include media(">=phone", "<tablet") {
+    width: 25%;
+  }
+}
+.notification-area {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background-color: cornsilk;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  transition: all 0.3s;
+  z-index: 50;
+}
+.notification-area-name {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background-color: cornsilk;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.custom-size {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.name:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+#tests {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.patient-name-noti {
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  color: $color-primary;
+  @include media(">=phone", "<tablet") {
+    font-size: 0.8rem;
+  }
+}
+.notification-test-list {
+  position: relative;
+  background-color: antiquewhite;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  transform: translateX(50rem);
+  transition: all 0.4s;
+  z-index: 50;
+}
+.button-report-print {
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+}
+.b-r-p {
+  display: inline-block;
+  color: $white;
+  background-color: $color-primary;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+}
+.button-report-submit {
+  text-align: center;
+}
+.noti-number {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.1rem;
+  background-color: $color-primary;
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+  border-radius: 50%;
+  border: 1px solid $white;
+  text-align: center;
+  left: 8%;
+  top: 0;
+  color: $white;
+}
+.cover-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.notiFl {
+  position: relative;
+  display: grid;
+}
+
+// print-receipt
+
+.receipt-container {
+  -webkit-print-color-adjust: exact;
+  -webkit-print-font-adjust: exact;
+  position: relative;
+  padding: 1.5rem;
+  width: 50%;
+  margin: 5rem auto;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  @include media(">=tablet", "<desktop") {
+    width: 75%;
+  }
+}
+.receipt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap;
+
+  margin: 1rem 0;
+  &_img {
+    width: 8rem;
+  }
+  &-img {
+    text-align: center;
+  }
+  &_lab-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &_user-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &-name-top {
+    margin-right: 0.5rem;
+    font-weight: 800;
+  }
+  &-body {
+    margin-bottom: 1rem;
+  }
+}
+.col-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // text-decoration: underline;
+  // align-items: center;
+  & div {
+    margin-bottom: 0.3rem;
+  }
+}
+.underline {
+  text-decoration: underline;
+}
+.fl-table-receipt {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.fl-table-receipt td,
+.fl-table-receipt th {
+  text-align: center;
+  padding: 10px;
+}
+
+.fl-table-receipt td {
+  border-right: 1px solid #eceff3;
+  font-size: 13px;
+}
+
+.fl-table-receipt thead th {
+  color: black;
+  background: rgba(233, 233, 233, 0.8);
+}
+
+.fl-table-receipt thead th:nth-child(odd) {
+  color: black;
+  // background: #eceff3;
+}
+
+.fl-table-receipt tr:nth-child(even) {
+  // background: #f8f8f8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table-receipt {
+    display: block;
+    width: 100%;
+  }
+  .table-wrapper-receipt:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: black;
+    padding: 0 0 10px;
+  }
+  .fl-table-receipt thead,
+  .fl-table-receipt tbody,
+  .fl-table-receipt thead th {
+    display: block;
+  }
+  .fl-table-receipt thead th:last-child {
+    border-bottom: none;
+  }
+  .fl-table-receipt thead {
+    float: left;
+  }
+  .fl-table-receipt tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .fl-table-receipt td,
+  .fl-table-receipt th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+  }
+  .fl-table-receipt thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table-receipt tbody tr {
+    display: table-cell;
+  }
+  .fl-table-receipt tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .fl-table-receipt tr:nth-child(even) {
+    background: transparent;
+  }
+  .fl-table-receipt tr td:nth-child(odd) {
+    // background: #f8f8f8;
+    // border-right: 1px solid #e6e4e4;
+  }
+  .fl-table-receipt tr td:nth-child(even) {
+    // border-right: 1px solid #e6e4e4;
+  }
+  .fl-table-receipt tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+.heading-tertiary {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.receipt-total {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  @include media(">=tablet", "<desktop") {
+    right: 10%;
+  }
+}

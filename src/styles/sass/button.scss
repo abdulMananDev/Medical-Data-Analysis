@@ -1,0 +1,307 @@
+.btn-primary {
+  color: white;
+  outline: none;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: $color-primary;
+  border: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.upgrade-btn-loading {
+  background: url("../assets/Magnify-1s-200px.gif");
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.btn-loading {
+  // position: relative;
+  background: url("../assets/Magnify-1s-200px.gif");
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  // z-index: 50;
+}
+
+.btn-grey {
+  color: black;
+  outline: none;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  background: #d8d3cd;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-error {
+  color: white;
+  outline: none;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  background: #ed6663;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-low {
+  color: $white;
+  outline: none;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  background: #776d8a;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-search {
+  color: white;
+  outline: none;
+  display: inline-block;
+  padding: 0.76rem 1.2rem;
+  background: $color-primary;
+  border: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+  &:hover {
+    color: $color-primary;
+    background: $color-secondary;
+    transform: scale(1.2);
+    @include media(">=tablet", "<desktop") {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.btn-primary:hover {
+  color: $color-primary;
+  background: $color-secondary;
+  transform: scale(1.2);
+  @include media(">=tablet", "<desktop") {
+    transform: scale(1.1);
+  }
+}
+
+.btn-complete {
+  color: $color-green-dark;
+  outline: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: $color-green;
+  border: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  border-radius: 1rem;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-normal {
+  color: $color-green-dark;
+  outline: none;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  background: $color-green;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-high {
+  color: azure;
+  background-color: orange;
+  outline: none;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-partial {
+  color: $color-primary;
+  outline: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: $color-yellow;
+  border: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  border-radius: 1rem;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-add {
+  color: $color-primary;
+  outline: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: $color-btn-add;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+.btn-transparent {
+  background-color: $color-primary;
+  outline: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: $color-btn-add;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+}
+
+.btn-remove {
+  color: azure;
+  background-color: orange;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #0000;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: inherit;
+
+  @include media(">=tablet", "<desktop") {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  @include media(">=phone", "<tablet") {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

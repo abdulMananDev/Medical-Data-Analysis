@@ -1,0 +1,26 @@
+{
+  "name": "patient-module",
+  "version": "1.0.0",
+  "description": "The patient module of the tolal Lab dashboard",
+  "main": "index.js",
+  "dependencies": {
+    "cryptojslib": "^3.1.2",
+    "material-design-icons": "^3.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "compile:sass": "node-sass src/styles/sass/style.scss src/styles/style.css  -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metatron020NaNa03/Sehat1.1.2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metatron020NaNa03/Sehat1.1.2/issues"
+  },
+  "homepage": "https://github.com/metatron020NaNa03/Sehat1.1.2#readme"
+}

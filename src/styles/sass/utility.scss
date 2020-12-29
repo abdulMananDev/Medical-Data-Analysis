@@ -1,0 +1,44 @@
+.margin-small {
+  margin-bottom: 1rem;
+  @include media(">=tablet", "<desktop") {
+    margin-bottom: 0.7rem;
+  }
+}
+.margin-medium {
+  margin-bottom: 3.5rem;
+  @include media(">=tablet", "<desktop") {
+    margin-bottom: 3.2rem;
+  }
+}
+.margin-small-top {
+  margin-top: 1.5rem;
+  @include media(">=tablet", "<desktop") {
+    margin-top: 1.2rem;
+  }
+}
+.font-small {
+  font-size: 1.5rem;
+}
+.positioning {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 3px 3px 0px;
+}
+.positioning:hover {
+  transform: scale(1);
+}
+.row-configuration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  // &-wrap {
+  //   display: flex;
+  //   flex-direction: row;
+  //   align-items: center;
+  //   // justify-content: space-between;
+  //   flex-flow: wrap;
+  // }
+}

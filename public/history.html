@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+<style>
+  .can{
+    width: 100rem;
+    height: 100rem;
+  }
+</style>
+<body>
+    <button  id="history_btn">Click</button>
+    <div class="can">
+      <canvas class="canvas"></canvas>
+    </div>
+    <script>
+      const btn = document.querySelector('#history_btn');
+     
+      console.log(btn)
+
+      btn.addEventListener("click", async () => {
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+        };
+        const response = await fetch(
+          `https://sehat.hyderdevelops.ml/labs/fetchLab?id=LAB-01`,
+          options
+        );
+        const data = await response.json();
+        console.log(data);
+        monthArr = []
+        data.sort((a,b)=>{
+          return Date.parse(a["D3"]) - Date.parse(b["D3"])
+        })
+
+        console.log(data)
+
+        let september = data.map((data)=>{
+          // return data.DATE.month == 8
+          if(data.DATE.month==8){
+           return {
+             x:data.DATE.day,
+             y:data.PRICE
+           }
+          }
+          
+        })
+        
+        console.log(september)
+        let x = []
+        let y =[]
+              september.forEach((price)=>{
+                // let sum = price.y[0]
+                let i = 0
+                // while(price.x[i] === price.x[i+1]){
+                //   // console.log('ye')
+                // }
+                console.log(price)
+                console.log(price.y)
+              })
+
+        september.forEach(element => {
+          x.push(element.x)
+          y.push(element.y)
+        });
+        console.log(x)
+        console.log(y)
+        let sum  = 0;
+       for(let i=0; i<x.length; i++){
+         for(let j=0;j<y.length;y++){
+
+           if(x[i] != x[i+1]){
+             sum = y[i]+y[i+1]
+           }
+         }
+        
+
+       }
+       console.log(sum)
+
+     
+        const lineCanvas =  document.querySelector('.canvas')
+      
+
+        const ctx = lineCanvas.getContext('2d')
+        const LineChart = new Chart(ctx,{
+          type:'line',
+          data:{
+            labels: x,
+            datasets: [
+              {
+                label: 'September Collection',
+                data: y,
+                backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+                borderColor: ["rgb(255, 99, 132)"],
+                borderWidth: 2,
+                fill: false,
+              }
+            ]
+          },
+          options:{
+            scales:{
+              yAxes:{
+                ticks:{}
+              }
+            }
+          }
+        })
+
+      });
+    </script>
+</body>
+</html>
+  
+</html>

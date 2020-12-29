@@ -1,0 +1,295 @@
+.patient_container {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  display: flex;
+  flex-direction: row;
+  // padding: 1rem 0 0rem 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(236, 233, 230, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../assets/microscope.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.display_container {
+  position: relative;
+  border-right: 2px solid $color-primary;
+  width: 50%;
+
+  margin: 2rem 0 2rem 0;
+
+  &_inner-container {
+    border: 2px solid $color-primary;
+    position: absolute;
+    z-index: 1500;
+    top: 6%;
+    left: 12%;
+    // transform: translate(-50%, -20%);
+    width: 65%;
+    text-align: center;
+    padding: 2rem 0;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
+      ),
+      url("../assets/details.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 2rem;
+    @include media(">=tablet", "<desktop") {
+      border: 2px solid $color-primary;
+
+      width: 65%;
+      border-radius: 2rem;
+    }
+    @include media(">=phone", "<tablet") {
+      border: 1px solid $color-primary;
+
+      width: 80%;
+      border-radius: 0.5rem;
+    }
+  }
+}
+.search_container {
+  position: relative;
+  width: 50%;
+
+  &_inner-container {
+    position: absolute;
+    top: 8%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    width: 65%;
+    // padding: 2rem;
+    border-radius: 2rem;
+    padding: 2rem 0;
+    border: 2px solid $color-primary;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
+      ),
+      url("../assets/search.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media(">=tablet", "<desktop") {
+      padding: 1.6rem;
+      width: 80%;
+      border-radius: 2rem;
+    }
+    @include media(">=phone", "<tablet") {
+      border: 1px solid $color-primary;
+
+      width: 80%;
+      border-radius: 0.5rem;
+    }
+  }
+}
+.display_details {
+  font-size: 1.8rem;
+  color: $color-primary;
+
+  @include media(">=tablet", "<desktop") {
+    font-size: 1.6rem;
+  }
+  @include media(">=phone", "<tablet") {
+    font-size: 1rem;
+  }
+}
+.dis {
+  display: inline-block;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid $color-primary;
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid $color-primary;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    letter-spacing: 1px;
+  }
+}
+
+.dis:first-child {
+  margin-top: 2.5rem;
+  @include media(">=tablet", "<desktop") {
+    margin-top: 1.8rem;
+  }
+}
+
+.result_details {
+  padding: 3rem 2rem;
+  transition: all 0.3s;
+  background-color: $white;
+  margin: 4rem 0 2rem 0;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid $color-primary;
+  text-align: center;
+  @include media(">=tablet", "<desktop") {
+    padding: 2.7rem 1.7rem;
+    margin: 3.7rem 0 1.7rem 0;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+}
+.result_output {
+  width: 25rem;
+  transition: all 0.3s;
+  @include media(">=tablet", "<desktop") {
+    width: 10rem;
+  }
+}
+.search-engine {
+  margin-top: 3rem;
+  @include media(">=tablet", "<desktop") {
+    margin-top: 2.7rem;
+  }
+}
+.search_input {
+  text-align: center;
+}
+.phone-no {
+  padding: 0.8rem 1rem 0.8rem 1.5rem;
+  position: relative;
+  color: $color-primary;
+  letter-spacing: 2px;
+  width: 100%;
+  border: 2px solid $color-primary;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  @include media(">=tablet", "<desktop") {
+    padding: 0.6rem 0.8rem 0.6rem 1.2rem;
+    letter-spacing: 2px;
+    border: 2px solid $color-primary;
+    // width: 110%;
+    font-size: 1.2rem;
+  }
+}
+.phone-no::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  @include media(">=tablet", "<desktop") {
+    font-size: 0.9rem;
+  }
+}
+.create-btn {
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input_details {
+  position: absolute;
+  border: 2px solid $color-primary;
+  position: absolute;
+  top: 20%;
+  left: -50%;
+  transform: translate(-50%, -20%);
+  width: 65%;
+  text-align: center;
+  padding: 2rem 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("../assets/details.jpg");
+  background-size: cover;
+
+  border-radius: 5rem;
+  @include media(">=tablet", "<desktop") {
+    border: 1px solid $color-primary;
+
+    width: 80%;
+    border-radius: 2rem;
+  }
+}
+.form_input {
+  padding: 0.8rem;
+  margin: 1.5rem 0 0rem 0;
+  color: $color-primary;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  font-family: inherit;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  transition: all 0.1s;
+  border: 2px solid $color-primary;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($color: #313131, $alpha: 0.2);
+    // border: none;
+    // border-bottom: 3px solid skyblue;
+  }
+  &:placeholder-shown + .form_label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
+  }
+}
+.form_label {
+  font-family: inherit;
+  display: block;
+  transition: all 0.4s;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  color: $color-primary;
+  margin-top: 0.5rem;
+}
+.form_input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  @include media(">=tablet", "<desktop") {
+    font-size: 0.9rem;
+  }
+}
+#patient-name {
+  // width: 50%;
+}
+#patient-email {
+  // width: 60%;
+}
+#patient-age {
+  // width: 25%;
+}
+
+#patient-address {
+  // width: 85%;
+}
+
+#patient-phone {
+  // width: 40%;
+}
+.result_error {
+  color: red;
+  position: absolute;
+  left: 35%;
+  top: 45%;
+  opacity: 1;
+}
+
+.add-user {
+  position: absolute;
+  top: -2%;
+  left: 35%;
+  opacity: 0;
+  visibility: hidden;
+}

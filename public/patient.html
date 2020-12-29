@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Patient | Details</title>
+  </head>
+  <body>
+    <div class="patient_container">
+      <div class="display_container">
+        <div class="display_container_inner-container">
+          <!-- display Results -->
+          <h2 class="heading-secondary">User Existance</h2>
+
+          <div class="display_details">
+            <div class="display_name dis"></div>
+            <br />
+            <div class="display_age dis"></div>
+            <br />
+            <div class="display_phone-no dis"></div>
+            <br />
+            <div class="display_email dis"></div>
+            <br />
+            <div class="display_residence dis"></div>
+            <br />
+          </div>
+          <div class="container-btn">
+            <button class="btn-primary" id="next">Next</button>
+          </div>
+        </div>
+
+        <div class="input_details">
+          <h2 class="heading-secondary">Add Patient</h2>
+          <div class="display_name">
+            <input
+              type="text"
+              class="form_input"
+              id="patient-name"
+              placeholder="Full Name"
+              spellcheck="false"
+            />
+            <label for="patient-name" class="form_label">Full Name</label>
+          </div>
+
+          <div class="display_age">
+            <input
+              type="text"
+              class="form_input"
+              id="patient-age"
+              placeholder="D.O.B"
+              spellcheck="false"
+            />
+
+            <label for="patient-age" class="form_label">mm/dd/yyyy</label>
+          </div>
+          <br />
+          <div class="display_phone-no">
+            <input
+              type="text"
+              class="form_input"
+              id="patient-phone"
+              placeholder="Phone number"
+              spellcheck="false"
+            />
+
+            <label for="patient-name" class="form_label">Phone Number</label>
+          </div>
+          <br />
+          <div class="display_email">
+            <input
+              type="email"
+              class="form_input"
+              id="patient-email"
+              placeholder="Email-id"
+              spellcheck="false"
+            />
+
+            <label for="patient-name" class="form_label">Email</label>
+          </div>
+          <br />
+
+          <div class="display_residence">
+            <input
+              type="text"
+              class="form_input"
+              id="patient-address"
+              placeholder="Full Address"
+              spellcheck="false"
+            />
+            <label for="patient-name" class="form_label"
+              >Residential-Address</label
+            >
+          </div>
+          <div class="send_user margin-small-top">
+            <button class="btn-primary" id="send">Send</button>
+          </div>
+        </div>
+      </div>
+      <div class="search_container">
+        <div class="search_container_inner-container">
+          <div class="search_heading">
+            <h3 class="heading-secondary">Search User</h3>
+          </div>
+          <div class="search-engine">
+            <div class="search_input">
+              <input
+                type="text"
+                class="phone-no"
+                id="phone-input"
+                placeholder="Phone-No."
+              />
+            </div>
+            <div class="container-btn">
+              <button class="btn-primary" id="search">
+                <span class="search-text material-icons">Search</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="result_details" id="result">
+            <div class="result_output" id="result_name">&nbsp;</div>
+            <!-- <span class="result_error">! User Not Found</span> -->
+          </div>
+          <div class="container-btn">
+            <button class="btn-primary" id="apply">Apply</button>
+          </div>
+          <div class="create-btn">
+            <button class="btn-complete" id="create">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../src/js/patient.js"></script>
+  </body>
+</html>

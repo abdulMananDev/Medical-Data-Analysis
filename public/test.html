@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+
+    <title>Test |Search|Append</title>
+  </head>
+  <script>
+    const QUERY = window.location.search;
+    const URL = new URLSearchParams(QUERY);
+    let data = URL.get("paramData");
+    data = JSON.parse(data);
+    console.log(data);
+  </script>
+  <body>
+    <!-- <h1>List of tests</h1> -->
+    <!-- <div class="list-container">
+      
+     
+    </div> -->
+
+    <div class="container-test">
+      <div class="user-report">
+        <!-- <ul class="test_list">
+          <li class="test_item">
+            <span class="material-icons margin-small">account_circle</span>
+            <span class="test_item-detail" id="patient-name"> </span>
+          </li>
+          <li class="test_item">
+            <span class="material-icons margin-small"> settings_cell </span>
+            <span class="test_item-detail" id="patient-phone"> </span>
+          </li>
+          <li class="test_item">
+            <span class="material-icons margin-small"> email </span>
+            <span class="test_item-detail" id="patient-email"> </span>
+          </li>
+          <li class="test_item">
+            <span class="material-icons margin-small"> wc </span>
+            <span class="test_item-detail" id="patient-gender"> </span>
+          </li>
+          <li class="test_item">
+            <span class="material-icons margin-small"> location_on </span>
+            <span class="test_item-detail" id="patient-address"> </span>
+          </li>
+          <li class="test_item">
+            <span class="material-icons margin-small"> today </span>
+            <span class="test_item-detail" id="patient-age"> </span>
+          </li>
+        </ul> -->
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">
+            account_circle
+          </div>
+          <div class="details" id="patient-name"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">
+            settings_cell
+          </div>
+          <div class="details" id="patient-phone"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">email</div>
+          <div class="details" id="patient-email"></div>
+        </div>
+        <!-- <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">wc</div>
+          <div class="details" id="patient-gender"></div>
+        </div> -->
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">location_on</div>
+          <div class="details" id="patient-address"></div>
+        </div>
+        <div class="user_details-report">
+          <div class="details_svg material-icons margin-small">cake</div>
+          <div class="details" id="patient-age"></div>
+        </div>
+      </div>
+
+      <!--  section search -->
+
+      <div class="test-addition">
+        <div class="container-search">
+          <div class="test-search-bar">
+            <input
+              type="text"
+              class="phone-no"
+              id="test-ip"
+              placeholder="Test Name"
+            />
+
+            <span id="test-search-icon">
+              <button class="btn-search">
+                <span class="material-icons search-text"> search </span>
+              </button>
+            </span>
+          </div>
+
+          <div class="test-confirmation">
+            <span class="complete">
+              <button class="btn-complete">Complete</button>
+            </span>
+            <span class="partial">
+              <button class="btn-partial">Partial</button></span
+            >
+          </div>
+
+          <div class="recieve">
+            <span class="heading-secondary test-heading">Bio-Chemistry</span>
+            <ul id="list" class="recieve-list">
+              <li class="recieve-list-item recieve-list-head" id="item">
+                <span class="left-serial-no recieve-list-head">S.no</span>
+                <span class="recieve-list-head">Test-Name</span>
+                <span class="recieve-list-head">Add</span>
+              </li>
+            </ul>
+            <ul id="list-complete" class="recieve-list">
+              <li class="recieve-list-item recieve-list-head" id="item">
+                <span class="left-serial-no recieve-list-head">S.no</span>
+                <span class="recieve-list-head">Test-Name</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- section results -->
+
+        <div class="container-result">
+          <div class="send">
+            <div class="rem-head">
+              <h3 class="heading-secondary">Selected Test</h3>
+            </div>
+
+            <ul class="list-send">
+              <div class="table-wrapper">
+                <table class="fl-table">
+                  <thead>
+                    <tr>
+                      <th>S. No</th>
+                      <th>Test</th>
+                      <th>Price</th>
+                      <th>Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body"></tbody>
+
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="for-complete">
+                <ul id="comp" class="complete-list recieve-list-complete"></ul>
+              </div>
+            </ul>
+          </div>
+          <div class="total">
+            <span class="material-icons"> credit_card </span>
+          </div>
+          <div class="print_next">
+            <span id="data-next">
+              <button class="btn-primary">Next</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../src/js/testing.js"></script>
+    <script src="../src/js/list.js"></script>
+  </body>
+</html>

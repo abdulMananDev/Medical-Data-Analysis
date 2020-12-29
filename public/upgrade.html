@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <title>Test | Upgrade</title>
+  </head>
+  <script>
+    const QUERY = window.location.search;
+    const URL = new URLSearchParams(QUERY);
+    let data = URL.get("paramData");
+    data = JSON.parse(data);
+    console.log(data);
+  </script>
+  <body>
+    <!-- upgrade-start -->
+    <div class="upgrade">
+      <div class="upgrade_navigation">
+        <div class="lab-info">
+          <h1 class="heading-secondary" id="upgrade_lab-name"></h1>
+          <br />
+          <span id="upgrade_lab-date"> &nbsp; </span>
+        </div>
+
+        <div class="upgrade_toggle">
+          <div class="btn-add-tests">
+            <button class="btn-primary" id="upgrade_add">Add tests</button>
+          </div>
+          <div class="btn-retrieve-tests">
+            <button class="btn-primary" id="upgrade_retrieve">
+              Retrieve tests
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="upgrade_toggle-containers">
+        <div class="upgrade_add-container">
+          <div class="upgrade-heading">
+            <h1 class="heading-secondary">Add Tests</h1>
+            <p class="para-primary">Upgrade Your Dimensions</p>
+          </div>
+          <div class="upgrade_form" id="add-from">
+            <div class="upgrade_category">
+              <h2 class="heading-tertiary">Category</h2>
+              <input
+                type="text"
+                class="form_input"
+                id="add-category"
+                placeholder="Category"
+              />
+            </div>
+            <div class="upgrade_category">
+              <h2 class="heading-tertiary">Test-Name</h2>
+              <input
+                type="text"
+                class="form_input"
+                id="add-test-name"
+                placeholder="Test-Name"
+              />
+            </div>
+            <div class="upgrade_category">
+              <h2 class="heading-tertiary">Charges</h2>
+              <input
+                type="text"
+                class="form_input"
+                id="price"
+                placeholder="price"
+              />
+            </div>
+            <div class="upgrade_category">
+              <h2 class="heading-tertiary">Range</h2>
+              <div class="row-configuration-wrap">
+                <input
+                  type="text"
+                  class="form_input"
+                  placeholder="Min-Value"
+                  id="min"
+                />
+                <input
+                  type="text"
+                  class="form_input"
+                  placeholder="Max-value"
+                  id="max"
+                />
+                <input
+                  type="text"
+                  class="form_input"
+                  placeholder="Units"
+                  id="units"
+                />
+              </div>
+            </div>
+            <div class="upgrade-test-description upgrade_category">
+              <h2 class="heading-tertiary">Test-Description</h2>
+              <textarea
+                id="add-description"
+                class="form_input"
+                cols="30"
+                rows="5"
+                style="resize: none"
+                placeholder="Little Test Description.."
+              ></textarea>
+            </div>
+            <div>
+              <button class="btn-complete" id="upgrade_submit">
+                <span class="tar">Submit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Retrieve Panel -->
+        <div class="upgrade_retrieve-container">
+          <div class="upgrade-heading">
+            <h1 class="heading-secondary">Tests</h1>
+            <p class="para-primary margin-small">Your Equipment Survey</p>
+            <div class="upgrade-test-list">
+              <!-- <div class="upgrade_retrieve-inner-container">
+                    <div class="margin-small">
+                      <h2 class="heading-secondary" id="retrieve-category">
+                        Biotechnology
+                      </h2>
+                    </div>
+                    <div class="margin-small" >
+                      <h4 class="heading-secondary" id="retrieve-test-name">
+                        SR-SODIUM
+                      </h3>
+                    </div>
+                    <div class="min-max-units">
+                      <div class="margin-small row-configuration">
+                          <div class="heading-secondary">Min-value</div>
+                          <div class="heading-secondary">Max-value</div>
+                          <div class="heading-secondary">Units</div>
+                      </div>
+                      <div class="margin-small row-configuration">
+                          <div class="heading-secondary" id="retrieve-min">1.5</div>
+                          <div class="heading-secondary" id="retrieve-max">2.5</div>
+                          <div class="heading-secondary" id="retrieve-units">g/ml</div>
+                      </div>
+                    </div>
+                    <div class="margin-small">
+                      <h3 id="retrieve-price">Price-Rs.500</h3>
+                    </div>
+                    <div class="margin-small">
+                      <p id="retrieve-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                        veniam aliquam neque praesentium quod voluptate?
+                      </p>
+                    </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../src/js/upgrade.js"></script>
+  </body>
+</html>
